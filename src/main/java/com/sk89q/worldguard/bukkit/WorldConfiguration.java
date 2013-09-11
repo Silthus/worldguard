@@ -96,6 +96,7 @@ public class WorldConfiguration {
     public Set<Integer> disableFireSpreadBlocks;
     public boolean preventLavaFire;
     public Set<Integer> allowedLavaSpreadOver;
+    public boolean explosionFlagCancellation;
     public boolean blockTNTExplosions;
     public boolean blockTNTBlockDamage;
     public boolean blockCreeperExplosions;
@@ -311,6 +312,7 @@ public class WorldConfiguration {
         removeInfiniteStacks = getBoolean("protection.remove-infinite-stacks", false);
         disableExpDrops = getBoolean("protection.disable-xp-orb-drops", false);
         disableObsidianGenerators = getBoolean("protection.disable-obsidian-generators", false);
+        explosionFlagCancellation = getBoolean("protection.explosion-flags-block-entity-damage", true);
 
         blockPotions = new HashSet<PotionEffectType>();
         for (String potionName : getStringList("gameplay.block-potions", null)) {
